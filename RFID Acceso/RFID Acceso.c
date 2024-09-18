@@ -1,0 +1,102 @@
+#include <16f877a.h>
+#fuses HS,NOWDT,NOPROTECT,NOPUT,NOLVP,NOBROWNOUT
+#use delay(clock=20M)
+#use standard_io(A)
+#use standard_io(D)
+#use standard_io(B)
+
+//led acceso --> salida
+#define led_access PIN_B0                       
+#define led_error PIN_B1
+#define led_conf PIN_B5
+
+//pines salida --> pantalla lcd
+#define LCD_DB4   PIN_D4                        
+#define LCD_DB5   PIN_D5
+#define LCD_DB6   PIN_D6
+#define LCD_DB7   PIN_D7
+#define LCD_RS    PIN_D2
+#define LCD_E     PIN_D3
+
+// pines entrada --> RFID (comunicación spi)
+#define MFRC522_CS  PIN_A0                      // Pin SDA
+#define MFRC522_SCK PIN_A1                      // Pin SCK
+#define MFRC522_SI  PIN_A2                      // Pin MOSI
+#define MFRC522_SO  PIN_A3                      // Pin MISO
+#define MFRC522_RST PIN_A4                      // Pin RST
+#include <RC522.h>                              
+#include <LCD_16X2.c>                           
+
+char user_1[4] = {0x6B, 0x3A, 0x45, 0x01};      
+char user_2[4] = {0x43, 0x89, 0x2D, 0x31};
+char user_3[4] = {0xAB, 0x60, 0x3B, 0x01};
+
+char i;                                         
+char UID[4];                                   
+unsigned int TagType;                           // Variable de verificacion de tag
+
+int cardProcessed = 0;                          // Variable de estado de procesamiento de tarjeta
+
+void main()
+{
+   output_low(led_access);                      
+   output_low(led_error);
+   lcd_init();                                  
+   MFRC522_Init();                             
+   
+   while(true)
+   {
+      lcd_gotoxy(2,1);                          
+      lcd_putc("IDENTIFIQUESE");
+      output_high(led_conf);
+      
+      if(MFRC522_isCard(&TagType)) // Verificación si hay un tag disponible
+      {
+         if(MFRC522_ReadCardSerial(&UID))       // Lectura y verificación si encontró algún tag
+         {
+            lcd_clear();
+            lcd_gotoxy(1,1);
+            lcd_putc("ID: ");
+            lcd_gotoxy(5,1);
+            for(int i=0; i<4; i++)                  // Imprime la ID en la pantalla LCD
+            {
+               printf(lcd_putc, "%X", UID[i]);
+            }
+            
+            if(MFRC522_Compare_UID(UID, user_1) || MFRC522_Compare_UID(UID, user_2) || MFRC522_Compare_UID(UID, user_3)) 
+            {
+               if(!cardProcessed) {
+                  output_high(led_access);
+                  output_low(led_error);
+                  lcd_gotoxy(1,2);
+                  lcd_putc("Bienvenido a Estructuras");
+                  delay_ms(1000);
+                  output_low(led_access);
+                  output_low(led_error);
+                  lcd_clear();
+                  cardProcessed = 1; // Marcar la tarjeta como procesada
+               }
+            }
+            else                               
+            {
+               if(!cardProcessed) {
+                  output_high(led_error);
+                  output_low(led_access);
+                  lcd_gotoxy(1,2);
+                  lcd_putc("Acceso Denegado");
+                  delay_ms(1000);
+                  output_low(led_access);
+                  output_low(led_error);
+                  lcd_clear();
+                  cardProcessed = 1; // Marcar la tarjeta como procesada
+               }
+            }
+            MFRC522_Clear_UID(UID);             // Limpia temporalmente la ID
+            delay_ms(100);
+         }
+         else {
+            cardProcessed = 0; // Restablecer el estado si no se detecta ninguna tarjeta
+         }
+      }
+   }
+}

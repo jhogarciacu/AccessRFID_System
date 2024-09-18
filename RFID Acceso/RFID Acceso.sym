@@ -1,0 +1,174 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-023 user_1
+024-027 user_2
+028-02B user_3
+02C     i
+02D-030 UID
+031     TagType
+032     cardProcessed
+033     MAIN.i
+034-035 MFRC522_Clear_UID.u_i
+034-035 MFRC522_isCard.TagType
+034-035 MFRC522_ReadCardSerial.str
+034     MFRC522_AntennaOn.stt
+034-035 MFRC522_Compare_UID.l
+034     lcd_init.i
+034     @PSTRINGC7_708.@SCRATCH1
+034     MAIN.@SCRATCH1
+035     @PRINTF_X_708.P1
+035     lcd_init.@SCRATCH1
+035     @PSTRINGC7_708.@SCRATCH2
+036     MFRC522_Clear_UID.j
+036     MFRC522_Request.reqMode
+036     @PRINTF_X_708.P1
+036     MFRC522_ReadCardSerial._status
+036-037 MFRC522_Compare_UID.u
+036     MFRC522_isCard.@SCRATCH1
+036     @PSTRINGC7_708.@SCRATCH3
+037     lcd_putc.c
+037-038 MFRC522_Request.TagType
+037-038 MFRC522_AntiColl.serNum
+037     MFRC522_ReadCardSerial.@SCRATCH1
+037     MFRC522_Clear_UID.@SCRATCH1
+037     @PSTRINGC7_708.@SCRATCH4
+038     lcd_gotoxy.x
+038     @delay_ms1.P1
+038     MFRC522_ReadCardSerial.@SCRATCH2
+038     MFRC522_Compare_UID.@SCRATCH1
+038     MFRC522_Clear_UID.@SCRATCH2
+039     lcd_gotoxy.y
+039     MFRC522_Request._status
+039     MFRC522_AntiColl._status
+03A     MFRC522_Request.backBits
+03A     lcd_gotoxy.address
+03A     MFRC522_AntiColl.i
+03B     MFRC522_AntiColl.serNumCheck
+03B     MFRC522_Request.@SCRATCH1
+03B     lcd_gotoxy.@SCRATCH1
+03C     lcd_send_byte.address
+03C     MFRC522_AntiColl.unLen
+03C     MFRC522_Request.@SCRATCH2
+03D     lcd_send_byte.n
+03D     MFRC522_ToCard.command
+03D     MFRC522_AntiColl.@SCRATCH1
+03E-03F MFRC522_ToCard.sendData
+03E     MFRC522_AntiColl.@SCRATCH2
+03E     lcd_send_byte.@SCRATCH1
+03F     lcd_send_nibble.nibble
+040     MFRC522_ToCard.sendLen
+041-042 MFRC522_ToCard.backData
+043-044 MFRC522_ToCard.backLen
+045     MFRC522_ToCard._status
+046     MFRC522_ToCard.irqEn
+047     MFRC522_ToCard.waitIRq
+048     MFRC522_ToCard.lastBits
+049     MFRC522_ToCard.n
+04A     MFRC522_ToCard.i
+04B     MFRC522_Set_Bit.addr
+04B     MFRC522_Clear_Bit.addr
+04B     MFRC522_ToCard.@SCRATCH1
+04C     MFRC522_Set_Bit.mask
+04C     MFRC522_Clear_Bit.mask
+04C     MFRC522_ToCard.@SCRATCH2
+04D     MFRC522_Set_Bit.tmp
+04D     MFRC522_Clear_Bit.tmp
+04D     MFRC522_ToCard.@SCRATCH3
+04E     MFRC522_Rd.address
+04E     MFRC522_Clear_Bit.@SCRATCH1
+04E     MFRC522_Set_Bit.@SCRATCH1
+04F     MFRC522_Rd.i
+04F     MFRC522_Wr.address
+050     MFRC522_Rd.ucAddr
+050     MFRC522_Wr.value
+051     MFRC522_Rd.ucResult
+051     MFRC522_Wr.i
+052     MFRC522_Wr.ucAddr
+052     MFRC522_Rd.@SCRATCH1
+053     MFRC522_Wr.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const714.call
+00000D  @const739.call
+000014  @const740.call
+000017  @const746.call
+000024  @const747.call
+00002C  @delay_ms1
+000040  lcd_send_nibble
+00006E  lcd_send_byte
+000095  lcd_init
+0000C4  MFRC522_Wr
+000111  MFRC522_Rd
+00015E  MFRC522_Clear_Bit
+00016E  MFRC522_Set_Bit
+00017D  MFRC522_Init
+000184  MFRC522_Reset
+0001BF  MFRC522_AntennaOff
+0001C4  MFRC522_AntennaOn
+0001D1  lcd_gotoxy
+0001E3  lcd_putc
+000207  @PSTRINGC7_708
+00025D  MFRC522_ToCard
+000337  MFRC522_isCard
+00033D  MFRC522_Request
+000372  MFRC522_ReadCardSerial
+000376  MFRC522_AntiColl
+0003D5  lcd_clear
+0003DD  @PRINTF_X_708
+000400  MFRC522_Compare_UID
+00044D  MFRC522_Clear_UID
+00045E  MAIN
+00045E  @cinit1
+000469  @cinit2
+
+Project Directory:
+    C:\Users\JHON GARCIA\Desktop\ACCESO_STM\RFID Acceso\
+
+Project Files:
+    RFID Acceso.c                                           [18-sept.-24 18:19  CRC=BC7BD4F9]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h [12-nov.-13 14:35  CRC=81334808]
+    RC522.h                                                 [14-abr.-24 17:39  CRC=CBA4EB05]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD_16X2.c [19-jun.-20 20:32  CRC=F406DE8D]
+
+Source signature=F161C520
+
+Units:
+    RFID Acceso (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   RFID Acceso.xsym
+    Errors:      RFID Acceso.err
+    Ext Symbols: RFID Acceso.esym
+    INHX8:       RFID Acceso.hex
+    Symbols:     RFID Acceso.sym
+    List:        RFID Acceso.lst
+    Debug/COFF:  RFID Acceso.cof
+    Project:     RFID Acceso.ccspjt
+    Call Tree:   RFID Acceso.tre
+    Statistics:  RFID Acceso.STA
