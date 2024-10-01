@@ -1,24 +1,24 @@
 
-ROM used:   1353/8192 (17%)
-            1353/8192 (17%) including unused fragments
+ROM used:   1364/8192 (17%)
+            1364/8192 (17%) including unused fragments
 
             0.9 Average locations per line
             4.4 Average locations per statement
 
-RAM used:   25/368 (7%) at main() level
-            57/368 (15%) worst case
+RAM used:   23/368 (6%) at main() level
+            55/368 (15%) worst case
 
-Stack used: 6 worst case (6 in main + 0 for interrupts)
+Stack used: 7 worst case (7 in main + 0 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  103    49  16  RFID Acceso.c
-  671     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
-  446   187  61  RC522.h
-  263    72  23  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD_16X2.c
+  119    51  16  RFID Acceso.c
+  671     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
+  446   187  60  RC522.h
+  263    72  23  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\LCD_16X2.c
 ----- -----
- 1483   308 Total
+ 1499   310 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -30,7 +30,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
  Inline         0   197  1.8  MFRC522_Reset
  Inline         1    72  2.0  MFRC522_AntennaOn
  Inline         0    25  1.2  MFRC522_AntennaOff
-0     84   6    0   298  1.9  MFRC522_Init
+ Inline         0   298  1.9  MFRC522_Init
 0    218  16   17  2288 15.8  MFRC522_ToCard
  Inline         7   319  6.0  MFRC522_Request
  Inline         8   581  8.2  MFRC522_AntiColl
@@ -41,36 +41,41 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0      8   1    0             @const694
 0     46   3    1   326  2.8  lcd_send_nibble
 0     39   3    3   235  3.8  lcd_send_byte
-0     47   3    2   380  4.7  lcd_init
+ Inline         2   380  4.7  lcd_init
 0     18   1    4   186  5.5  lcd_gotoxy
 0     36   3    1   272  4.1  lcd_putc
 0      8   1    0    17  0.8  lcd_clear
 0      1   0    0             @const714
 0     86   6    4             @PSTRINGC7_708
-0    235  17    1  1428  7.3  MAIN
-0      7   1    0             @const739
-0      3   0    0             @const740
-0     35   3    2             @PRINTF_X_708
-0     13   1    0             @const746
+0    136  10    0    55  1.1  system_init
+0     69   5    1   225  3.9  show_UID_on_LCD
+0      3   0    0             @const737
+ Inline         2             @PRINTF_X_708
+0     37   3    0    88  2.7  check_valid_user
+0     39   3    1   158  1.7  access_granted
+0     13   1    0             @const745
+0     39   3    1   158  1.7  access_denied
 0      8   1    0             @const747
+0     92   7    0   402  4.5  MAIN
+0      7   1    0             @const751
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               22
-    Statements              308
-    Comments                182
-    Volume (V)              15183
-    Difficulty (D)          103.8
-    Effort to implement (E) 1575766
-    Time to implement (T)   24 hours, 19 minutes
+    Functions               27
+    Statements              310
+    Comments                191
+    Volume (V)              15444
+    Difficulty (D)          112.0
+    Effort to implement (E) 1729934
+    Time to implement (T)   26 hours, 42 minutes
     Est Delivered Bugs (B)  5
-    Cyclomatic Complexity   40
-    Maintainability (MI)    45
+    Cyclomatic Complexity   39
+    Maintainability (MI)    57
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1349  695  
+00004-007FF  1360  684  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

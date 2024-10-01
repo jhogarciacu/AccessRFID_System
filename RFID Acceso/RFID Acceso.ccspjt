@@ -16,6 +16,9 @@ Type=4
 2=RC522.h
 3=
 4=
+[ExtraIncludes]
+Count=1
+1=rfid acceso=c:\users\jhon garcia\desktop\sistema_acceso\accessrfid_system\rfid acceso\prueba.c
 [Units]
 Count=1
 1=RFID Acceso (main)

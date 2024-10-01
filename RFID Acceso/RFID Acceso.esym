@@ -1,8 +1,7 @@
-D G "lcd_line_two" 3 4 "0x40" "LCD RAM address for the 2nd line"
-D G "__PCM__" 0 104 ""5.015""
-D G "__DEVICE__" 0 104 "877"
-D G "__DATE__" 0 104 ""18-sept.-24""
-D G "__TIME__" 0 104 ""18:19:26"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "__PCM__" 0 0 ""5.015""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""01-oct.-24""
+D G "__TIME__" 0 0 ""14:52:07"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `54 
 f B "set_tris_a" 1 37 "void(int8 value)" `53 
@@ -786,11 +785,11 @@ D G "LCD_DB6" 0 16 "PIN_D6"
 D G "LCD_DB7" 0 17 "PIN_D7"
 D G "LCD_RS" 0 18 "PIN_D2"
 D G "LCD_E" 0 19 "PIN_D3"
-D G "MFRC522_CS" 0 22 "PIN_A0" "Pin SDA"
-D G "MFRC522_SCK" 0 23 "PIN_A1" "Pin SCK"
-D G "MFRC522_SI" 0 24 "PIN_A2" "Pin MOSI"
-D G "MFRC522_SO" 0 25 "PIN_A3" "Pin MISO"
-D G "MFRC522_RST" 0 26 "PIN_A4" "Pin RST"
+D G "MFRC522_CS" 0 22 "PIN_A0"
+D G "MFRC522_SCK" 0 23 "PIN_A1"
+D G "MFRC522_SI" 0 24 "PIN_A2"
+D G "MFRC522_SO" 0 25 "PIN_A3"
+D G "MFRC522_RST" 0 26 "PIN_A4"
 D G "PCD_IDLE" 2 1 "0x00" "NO action; Cancel the current command"
 D G "PCD_AUTHENT" 2 2 "0x0E" "Authentication Key"
 D G "PCD_RECEIVE" 2 3 "0x08" "Receive Data"
@@ -1004,20 +1003,32 @@ V L "cg" 3 258 "int8" `728
 V G "user_1" 0 30 "int8[4]" `729 
 V G "user_2" 0 31 "int8[4]" `730 
 V G "user_3" 0 32 "int8[4]" `731 
-V G "i" 0 34 "int8" `732 
-V G "UID" 0 35 "int8[4]" `733 
-V G "TagType" 0 36 "int8" `734  "Variable de verificacion de tag"
-V G "cardProcessed" 0 38 "int8" `735 
-C L "MAIN" 0 38 1 "FUNCTION"
-F G "MAIN" 0 41 "void()" `736 
-C L "MAIN" 0 38 1 "FUNCTION"
-C L "MAIN" 0 38 1 "FUNCTION"
-V L "i" 0 61 "int8" `741 
-C L "MAIN" 0 38 1 "FUNCTION"
-C L "MAIN" 0 38 1 "FUNCTION"
-C L "MAIN" 0 38 1 "FUNCTION"
-C L "MAIN" 0 38 1 "FUNCTION"
-C L "MAIN" 0 38 1 "FUNCTION"
+V G "UID" 0 34 "int8[4]" `732 
+V G "TagType" 0 35 "int8" `733  "Variable de verificacion de tag"
+V G "cardProcessed" 0 37 "int8" `734 
+C L "system_init" 0 37 2 "FUNCTION"
+F G "system_init" 0 40 "void()" `735 
+C L "show_UID_on_LCD" 0 37 1 "FUNCTION"
+F G "show_UID_on_LCD" 0 48 "void()" `736 
+V L "i" 0 53 "int8" `738 
+C L "check_valid_user" 0 37 1 "FUNCTION"
+F G "check_valid_user" 0 59 "int8()" `743 
+C L "access_granted" 0 37 1 "FUNCTION"
+F G "access_granted" 0 66 "void()" `744 
+C L "access_denied" 0 37 1 "FUNCTION"
+F G "access_denied" 0 78 "void()" `746 
+C L "MAIN" 0 37 1 "FUNCTION"
+F G "MAIN" 0 90 "void()" `748 
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
+C L "MAIN" 0 37 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
