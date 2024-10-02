@@ -49,7 +49,7 @@ Voltaje de operación: Funciona con un rango de voltaje entre 2V y 5.5V, lo que 
 Programable In-System (ICSP): Se puede programar directamente en la placa, lo que facilita el desarrollo y depuración del sistema.
 
 
-![RFC-522](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\RFC-522.jpg)
+![RFC-522](https://github.com/user-attachments/assets/7cfc57b7-56a7-4b0d-93ac-7b8dfd11ee8e)
 
 Frecuencia de operación: 13.56 MHz.
 
