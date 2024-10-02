@@ -16,11 +16,81 @@ Componentes:
 
 ![Pic16f877a](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\pic.jpg)
 
+Arquitectura de 8 bits: Basado en la arquitectura Harvard modificada, lo que permite acceso independiente a la memoria de programa y la memoria de datos.
+Velocidad del reloj: Opera hasta 20 MHz con un oscilador externo.
+Memoria:
+
+14 KB de memoria flash para el almacenamiento del programa.
+
+368 bytes de RAM para datos.
+
+256 bytes de EEPROM para almacenamiento no volátil de datos.
+
+Puertos de entrada/salida:
+
+33 pines de I/O digitales divididos en cinco puertos (PORTA, PORTB, PORTC, PORTD, y PORTE).
+
+Módulos de comunicación:
+
+USART para comunicación serie (RS-232).
+
+SPI y I²C para comunicación síncrona.
+
+Convertidor A/D: 8 canales de 10 bits para convertir señales analógicas a digitales.
+
+Temporizadores: Incluye 3 temporizadores de 8/16 bits (Timer0, Timer1, Timer2).
+
+Interrupciones: Soporta varias fuentes de interrupción como los temporizadores, la comunicación USART, el puerto SPI, y otros eventos internos/externos.
+
+Modos de bajo consumo: Dispone de modo SLEEP para ahorro de energía.
+
+Voltaje de operación: Funciona con un rango de voltaje entre 2V y 5.5V, lo que lo hace compatible con diversas aplicaciones de baja y media potencia.
+
+Programable In-System (ICSP): Se puede programar directamente en la placa, lo que facilita el desarrollo y depuración del sistema.
+
+
 ![RFC-522](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\RFC-522.jpg)
 
-![Regulador-LM317](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\Regulador.jpg)
+Frecuencia de operación: 13.56 MHz.
 
-![Regulador-LM317](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\Regulador.jpg)
+Protocolos compatibles: ISO14443A, MIFARE (Classic 1K y 4K, entre otros).
+
+Tensión de operación: 2.5V a 3.3V (aunque es comúnmente utilizado con microcontroladores de 5V con niveladores de voltaje).
+
+Interfaz de comunicación: SPI (Serial Peripheral Interface) es la principal, aunque también soporta I2C y UART.
+
+Distancia de lectura: Aproximadamente 0-6 cm (depende del tipo de tarjeta y las condiciones ambientales).
+
+Velocidad de comunicación: Hasta 10 Mbit/s en SPI.
+
+Corriente en modo de operación: 13-26 mA. Corriente en modo de espera: 10 µA. Temperatura de operación: -20°C a +80°C.
+Tamaño: El módulo mide aproximadamente 60 mm x 40 mm.
+
+Compatibilidad con tarjetas MIFARE: Soporta tarjetas MIFARE Classic 1K, MIFARE Classic 4K, y etiquetas ultraligeras (UltraLight).
+
+
+![Regulador-LM317](imagenes\Regulador.jpg)
+
+Rango de voltaje de salida ajustable: 1.25V a 37V.
+
+Corriente de salida máxima: 1.5 A (con disipación de calor adecuada).
+
+Tensión de entrada mínima: Necesita al menos 3V más que el voltaje de salida deseado (dropout voltage).
+
+Protección contra sobrecarga: El LM317tiene un limitador de corriente interno que lo protege de sobrecargas.
+
+Protección contra sobrecalentamiento: Incluye un sistema de protección térmica que apaga el regulador si la temperatura es demasiado alta.
+
+Rango de voltaje de entrada: Generalmente hasta 40V.
+
+Precisión de salida: ±1.5% (dependiendo de las resistencias y de la estabilidad de la fuente de entrada).
+
+Requerimiento de componentes externos: Dos resistencias para ajustar el voltaje de salida y un par de condensadores (opcional) para estabilizar el regulador.
+
+Eficiencia: Es menos eficiente que los reguladores conmutados, ya que es un regulador lineal y disipa el exceso de energía en forma de calor.
+
+Disipación de potencia: Necesita un disipador de calor para trabajar con corrientes elevadas o diferencias grandes entre el voltaje de entrada y de salida.
+
 
 
 
