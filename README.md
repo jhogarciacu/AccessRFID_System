@@ -14,6 +14,7 @@ En términos de seguridad, este sistema de acceso es altamente efectivo, ya que 
 
 Componentes:
 
+Microcontrolador pic16f877a
 ![pic](https://github.com/user-attachments/assets/905c4dd1-3df3-4ba5-838a-b8b5155ba1cc)
 
 Arquitectura de 8 bits: Basado en la arquitectura Harvard modificada, lo que permite acceso independiente a la memoria de programa y la memoria de datos.
@@ -48,7 +49,7 @@ Voltaje de operación: Funciona con un rango de voltaje entre 2V y 5.5V, lo que 
 
 Programable In-System (ICSP): Se puede programar directamente en la placa, lo que facilita el desarrollo y depuración del sistema.
 
-
+Antena RFC-522
 ![RFC-522](https://github.com/user-attachments/assets/7cfc57b7-56a7-4b0d-93ac-7b8dfd11ee8e)
 
 Frecuencia de operación: 13.56 MHz.
@@ -68,7 +69,7 @@ Tamaño: El módulo mide aproximadamente 60 mm x 40 mm.
 
 Compatibilidad con tarjetas MIFARE: Soporta tarjetas MIFARE Classic 1K, MIFARE Classic 4K, y etiquetas ultraligeras (UltraLight).
 
-
+Regulador LM317
 ![Regulador](https://github.com/user-attachments/assets/c4bbc4c2-0b73-476c-8f08-9eef97edb05d)
 
 Rango de voltaje de salida ajustable: 1.25V a 37V.
