@@ -14,7 +14,7 @@ En términos de seguridad, este sistema de acceso es altamente efectivo, ya que 
 
 Componentes:
 
-![Pic16f877a](C:\Users\JHON GARCIA\Desktop\Sistema_Acceso\AccessRFID_System\imagenes\pic.jpg)
+![pic](https://github.com/user-attachments/assets/905c4dd1-3df3-4ba5-838a-b8b5155ba1cc)
 
 Arquitectura de 8 bits: Basado en la arquitectura Harvard modificada, lo que permite acceso independiente a la memoria de programa y la memoria de datos.
 Velocidad del reloj: Opera hasta 20 MHz con un oscilador externo.
