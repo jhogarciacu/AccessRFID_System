@@ -92,6 +92,27 @@ Eficiencia: Es menos eficiente que los reguladores conmutados, ya que es un regu
 
 Disipación de potencia: Necesita un disipador de calor para trabajar con corrientes elevadas o diferencias grandes entre el voltaje de entrada y de salida.
 
+Componentes adicionales:
+
+Tarjetas RFID
+Resistencias
+Leds
+Condensadores
+Pantalla LCD
+Cristal
+Botón
+
+Componentes que actúan como entradas:
+
+El componente principal que actúa como entrada en nuestro sistema de acceso es la antena RC522 y respectivamente tales tarjetas RFID, ya que al acercar las tarjetas a la antena
+
+Componentes que actúan como salidas:
+
+Los componentes que actúan como salidas en nuestro sistema de acceso son los leds y la pantalla LCD que al procesar la señal del microcontrolador este indicará con un led verde si se le da el permiso de acceder y mediante la pantalla LCD imprimir un mensaje de “Acceso permitido” de lo contrario se encenderá un led rojo e imprimiendo en pantalla “Acceso denegado”.
+
+DISEÑO 3D
+Aqui podemos ver la caja portadora en donde va a ir todo nuestro circuito, se desarrolló con una impresora 3D.
+
 
 
 
