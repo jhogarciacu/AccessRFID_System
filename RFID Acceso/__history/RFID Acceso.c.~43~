@@ -86,7 +86,7 @@ void access_denied() {
    lcd_clear();
 }
 
-
+// Función principal
 void main() {
    system_init();  // Inicializa el sistema
 
