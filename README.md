@@ -69,7 +69,7 @@ Tamaño: El módulo mide aproximadamente 60 mm x 40 mm.
 Compatibilidad con tarjetas MIFARE: Soporta tarjetas MIFARE Classic 1K, MIFARE Classic 4K, y etiquetas ultraligeras (UltraLight).
 
 
-![Regulador-LM317](imagenes\Regulador.jpg)
+[![Regulador-LM317](imagenes\Regulador.jpg)](https://github.com/jhogarciacu/AccessRFID_System/issues/2#issue-2561969482)
 
 Rango de voltaje de salida ajustable: 1.25V a 37V.
 
