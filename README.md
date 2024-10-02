@@ -118,6 +118,7 @@ Aqui podemos ver la caja portadora en donde va a ir todo nuestro circuito, se de
 
 ESQUEMÁTICO
 ![esquematico](https://github.com/user-attachments/assets/6549615f-16a7-470f-8efc-172405b20c5e)
+
 En esta imagen se puede observar el diseño del esquemático que vamos a obtener al momento de generar nuestra PCB con cada una de las conexiones correspondientes
 
 El circuito de la antena y del regulador de voltaje van por fuera de nuestra PCB pero se dejaron cada uno de los pines indicados para hacer la respectiva conexión con el microcontrolador.
@@ -127,8 +128,10 @@ VISUALIZACIÓN 3D
 ![placa 3D](https://github.com/user-attachments/assets/25faa962-939b-4f6b-b8b7-50461aaa31c2)
 
 
+
 DISEÑO PCB
 ![PCB](https://github.com/user-attachments/assets/f8554c19-1816-44f7-9d7c-8ec77f785825)
+
 
 
 Conclusión
