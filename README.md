@@ -110,11 +110,24 @@ Componentes que actúan como salidas:
 
 Los componentes que actúan como salidas en nuestro sistema de acceso son los leds y la pantalla LCD que al procesar la señal del microcontrolador este indicará con un led verde si se le da el permiso de acceder y mediante la pantalla LCD imprimir un mensaje de “Acceso permitido” de lo contrario se encenderá un led rojo e imprimiendo en pantalla “Acceso denegado”.
 
-
-![caja](https://github.com/user-attachments/assets/0aa611f0-ea0e-4a61-b973-42628ac9220a)
 DISEÑO 3D
+![caja](https://github.com/user-attachments/assets/0aa611f0-ea0e-4a61-b973-42628ac9220a)
+
 Aqui podemos ver la caja portadora en donde va a ir todo nuestro circuito, se desarrolló con una impresora 3D.
 
 
+ESQUEMÁTICO
+En esta imagen se puede observar el diseño del esquemático que vamos a obtener al momento de generar nuestra PCB con cada una de las conexiones correspondientes
+
+El circuito de la antena y del regulador de voltaje van por fuera de nuestra PCB pero se dejaron cada uno de los pines indicados para hacer la respectiva conexión con el microcontrolador.
 
 
+VISUALIZACIÓN 3D
+
+
+DISEÑO PCB
+
+
+CONCLUSIÓN
+
+Nuestro sistema de acceso ofrece una solución eficaz para mejorar la seguridad, con una instalación sencilla y adaptable a diversos sectores empresariales e industriales. Facilita un control eficiente y automatizado de los accesos, permitiendo la gestión segura de las entradas. Además, el sistema está diseñado con la posibilidad de mejorar en el futuro, incorporando una funcionalidad para registrar y verificar el historial de accesos, lo cual aún no se ha implementado pero representa una importante área de mejora en nuestro desarrollo.
