@@ -110,6 +110,8 @@ Componentes que actúan como salidas:
 
 Los componentes que actúan como salidas en nuestro sistema de acceso son los leds y la pantalla LCD que al procesar la señal del microcontrolador este indicará con un led verde si se le da el permiso de acceder y mediante la pantalla LCD imprimir un mensaje de “Acceso permitido” de lo contrario se encenderá un led rojo e imprimiendo en pantalla “Acceso denegado”.
 
+
+![caja](https://github.com/user-attachments/assets/0aa611f0-ea0e-4a61-b973-42628ac9220a)
 DISEÑO 3D
 Aqui podemos ver la caja portadora en donde va a ir todo nuestro circuito, se desarrolló con una impresora 3D.
 
