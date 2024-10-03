@@ -143,7 +143,14 @@ DISEÑO PCB
 
 ![PCB](https://github.com/user-attachments/assets/f8554c19-1816-44f7-9d7c-8ec77f785825)
 
+CODIGO
 
+Funciones clave
+
+1. show_UID_on_LCD: Función para leer y mostrar la UID en la pantalla LCD (libreria LCD)
+2. check_valid_user: Función para verificar si el UID coincide con algún usuario
+3. access_granted: Función para manejar el acceso correcto
+4. access_denied: Función para manejar el acceso denegado
 
 Conclusión
 
